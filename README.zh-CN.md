@@ -20,6 +20,7 @@ f(observation, goal, action_i)  →  向量 z_i  →  logit  →  softmax  →  
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python experiments.py      # 6 个实验 → out/*.png（用仓库自带的小模型权重）
 .venv/bin/python scenario.py         # 一个完整场景：输入 → 推理 → 输出 → out/scenario.gif
+.venv/bin/python animations.py       # 实验的动图版本 → out/gifs/*.gif
 ```
 
 预训练编码器版本（Qwen3-0.6B / ModernBERT-base）微调后的权重有 270 MB / 600 MB，超过 GitHub 上限，没有放进仓库。重新训练全部模型（Apple Silicon GPU 约 40 分钟，会从 Hugging Face 下载约 2 GB 基座权重）：
@@ -87,3 +88,4 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `train.py` | 训练，以及在三个测试集上评估（同分布 / 没见过的同义词 / 没见过的文件名） |
 | `experiments.py` | 实验 1–6 |
 | `scenario.py` | 实验 7：一个完整场景，一步一步可视化 |
+| `animations.py` | 动图：速度、探索、训练过程、NanoJev vs Laya 的打包方式 |

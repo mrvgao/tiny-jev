@@ -20,6 +20,7 @@ f(observation, goal, action_i)  →  vector z_i  →  logit  →  softmax  →  
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python experiments.py      # 6 experiments → out/*.png  (uses the small checkpoints in the repo)
 .venv/bin/python scenario.py         # one episode, input → reasoning → output → out/scenario.gif
+.venv/bin/python animations.py       # animated versions of the experiments → out/gifs/*.gif
 ```
 
 The pretrained-encoder models (Qwen3-0.6B / ModernBERT-base) produce fine-tuned weights of 270 MB / 600 MB, too large for GitHub. Recreate everything (about 40 minutes on an Apple Silicon GPU; downloads ~2 GB of base weights from Hugging Face):
@@ -87,5 +88,6 @@ All numbers below come from actually training and running the models in this rep
 | `train.py` | Training + evaluation on 3 test sets (same distribution, unseen synonyms, unseen file names) |
 | `experiments.py` | Experiments 1–6 |
 | `scenario.py` | Experiment 7: one episode, step by step |
+| `animations.py` | GIFs: speed, exploration, training, NanoJev vs Laya packing |
 
 Code comments are in Chinese.
