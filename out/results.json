@@ -1,0 +1,122 @@
+{
+ "speed": {
+  "gpt_ms": 10.279804473684635,
+  "jev_ms": 2.153686066934218,
+  "gpt_forwards": 5.92,
+  "gpt_ms_by_n": {
+   "1": 1.6843749981489964,
+   "2": 3.4816879997379147,
+   "4": 6.8572090021916665,
+   "8": 13.879395999538247,
+   "12": 20.82927099399967,
+   "16": 27.735396004572976,
+   "24": 41.485082991130184,
+   "32": 55.53395850438392
+  }
+ },
+ "explore": {
+  "unlocked_greedy": 0.98,
+  "unlocked_sample": 0.99,
+  "locked_greedy": 0.0,
+  "locked_sample": 0.68
+ },
+ "inside": {
+  "candidates": [
+   "list_files",
+   "search report",
+   "open_file notes.txt",
+   "unlock_file notes.txt",
+   "delete_file notes.txt",
+   "open_file report.md",
+   "unlock_file report.md",
+   "delete_file report.md",
+   "open_file todo.md",
+   "unlock_file todo.md",
+   "delete_file todo.md"
+  ],
+  "p": [
+   0.04800000041723251,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.800000011920929,
+   0.15199999511241913,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "p_star": [
+   0.05,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.8,
+   0.15,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "logits": [
+   7.630000114440918,
+   -2.609999895095825,
+   -4.039999961853027,
+   -4.28000020980835,
+   -4.960000038146973,
+   10.4399995803833,
+   8.789999961853027,
+   -3.619999885559082,
+   2.049999952316284,
+   0.12999999523162842,
+   -4.75
+  ]
+ },
+ "loss": {
+  "laya_ce": {
+   "kl": 0.01696129420849805,
+   "top1": 0.9983333333333333,
+   "mae": 0.0020797892360566723
+  },
+  "laya_brier": {
+   "kl": 0.15931341230869292,
+   "top1": 0.9533333333333334,
+   "mae": 0.017677879639395076
+  }
+ },
+ "cost": {
+  "K": 22,
+  "tokens_nanojev": 826.0,
+  "tokens_laya": 175.0
+ },
+ "generalize": {
+  "gpt_ce": {
+   "test": 1.0,
+   "paraphrase": 0.715,
+   "unseen_files": 0.37
+  },
+  "laya_ce": {
+   "test": 0.998,
+   "paraphrase": 0.553,
+   "unseen_files": 0.963
+  },
+  "nanojev_ce": {
+   "test": 1.0,
+   "paraphrase": 0.75,
+   "unseen_files": 0.987
+  },
+  "laya_bert_ce": {
+   "test": 1.0,
+   "paraphrase": 0.708,
+   "unseen_files": 1.0
+  },
+  "nanojev_qwen_ce": {
+   "test": 1.0,
+   "paraphrase": 0.918,
+   "unseen_files": 0.997
+  },
+  "gpt_invalid_unseen": 0.63
+ }
+}

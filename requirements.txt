@@ -1,0 +1,6 @@
+torch>=2.1
+transformers>=4.48
+safetensors
+numpy
+matplotlib>=3.7
+pillow
