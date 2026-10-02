@@ -61,7 +61,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | 4 | **交叉熵 vs Brier** | 两者都能学到目标概率（见校准图）。这里交叉熵收敛更快（测试 KL 0.017 vs 0.159）；预测错得离谱时，Brier 的梯度会变得很小 |
 | 5 | **NanoJev vs Laya 的计算量** | 22 个候选时，NanoJev 每次决策要处理 **826 个 token**（每个候选都重复一遍 obs 和 goal），Laya 只要 **175 个** |
 | 6 | **为什么要复用预训练模型** | 目标里换成没见过的同义词（modify / view / remove）：从零训练 55–75%，**Qwen3 92%**；ModernBERT 在这一项**没有**帮助（71%）。遇到没见过的文件名，GPT 基线有 **63%** 的时候编出了不存在的动作；Jev 类模型只能从合法候选里选 |
-| 7 | **一个完整场景** | `list_files` → `open_file`（失败，被锁住）→ `unlock_file`（以 0.17 的概率采样到）→ `open_file` → `edit_file` ✓ |
+| 7 | **一个完整场景** | `list_files` → `open_file`（失败，被锁住）→ `unlock_file`（以 0.15 的概率采样到）→ `open_file` → `edit_file` ✓ |
 
 ![速度](out/1_speed.png)
 ![探索](out/2_explore.png)

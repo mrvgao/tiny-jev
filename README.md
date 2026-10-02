@@ -61,7 +61,7 @@ All numbers below come from actually training and running the models in this rep
 | 4 | **Cross-entropy vs Brier** | Both learn the target probabilities (calibration plots). CE converged faster here (test KL 0.017 vs 0.159); Brier's gradient vanishes when a prediction is badly wrong |
 | 5 | **NanoJev vs Laya cost** | With 22 candidates, NanoJev processes **826 tokens** per decision (obs + goal repeated for every candidate), Laya **175** |
 | 6 | **Why reuse a pretrained model** | Goals with unseen synonyms (modify / view / remove): from-scratch models 55–75%, **Qwen3 92%**. ModernBERT did **not** help here (71%). The GPT baseline invented **non-existent actions 63%** of the time on unseen file names; Jev models can only choose valid candidates |
-| 7 | **One full episode** | `list_files` → `open_file` (fails, locked) → `unlock_file` (sampled at p = 0.17) → `open_file` → `edit_file` ✓ |
+| 7 | **One full episode** | `list_files` → `open_file` (fails, locked) → `unlock_file` (sampled at p = 0.15) → `open_file` → `edit_file` ✓ |
 
 ![Speed](out/1_speed.png)
 ![Exploration](out/2_explore.png)
