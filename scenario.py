@@ -201,6 +201,6 @@ def main():
 
 
 if __name__ == "__main__":
-    plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang HK", "Heiti TC", "DejaVu Sans"]
+    plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang HK", "Heiti TC", "Noto Sans CJK SC", "DejaVu Sans"]
     plt.rcParams["axes.unicode_minus"] = False
     main()

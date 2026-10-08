@@ -34,7 +34,7 @@ OUT = HERE / "out"
 CKPT = HERE / "checkpoints"
 DEV = "mps" if torch.backends.mps.is_available() else "cpu"
 
-plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang HK", "Heiti TC", "DejaVu Sans"]
+plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang HK", "Heiti TC", "Noto Sans CJK SC", "DejaVu Sans"]
 plt.rcParams["axes.unicode_minus"] = False
 C_GPT, C_JEV, C_NANO, C_BERT, C_QWEN = "#888780", "#D85A30", "#3B8BD4", "#7F77DD", "#1D9E75"
 

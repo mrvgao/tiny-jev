@@ -26,7 +26,7 @@ from models import LOSSES, GPTPolicy, Laya, LayaBert, NanoJev, NanoJevQwen
 
 HERE = Path(__file__).parent
 CKPT = HERE / "checkpoints"
-DEV = "mps" if torch.backends.mps.is_available() else "cpu"
+DEV = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
 SCRATCH = {"gpt": GPTPolicy, "nanojev": NanoJev, "laya": Laya}
 PRETRAINED = {"nanojev_qwen": NanoJevQwen, "laya_bert": LayaBert}
 
